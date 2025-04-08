@@ -1,0 +1,12 @@
+{
+  "name": "node-hetzner-manual",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
