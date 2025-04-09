@@ -89,7 +89,16 @@ server {
 
 `sudo nginx -s reload` -> reload nginx with new config
 
-# Deploy changes of app without down time
+# Deploy changes of app without minimal down time
+
+`git pull` -> pull changes (navigate to folder before)
+`pm2 reload <path-to-node-app>` -> reload process
+
+_optional_
+run this command before to track down time
+`while true; do echo "$(date +"%H:%M:%S") - $(curl -s -o /dev/null -w '%{http_code}' http://<ip-or-domain>)"; sleep 0.25; done`
+
+_could possibly be done without down times when utilizing pm2 cluster mode_
 
 # Not considered
 
