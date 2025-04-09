@@ -88,3 +88,22 @@ server {
 `sudo nginx -t` -> test config
 
 `sudo nginx -s reload` -> reload nginx with new config
+
+# Deploy changes of app without down time
+
+# Not considered
+
+## Setting up with https will not be considered since a domain would be required.
+
+rough steps:
+
+`sudo apt update`
+`sudo apt install certbot python3-certbot-nginx` -> install certbot for nginx
+
+`sudo certbot --nginx -d mycoolapp.com -d www.mycoolapp.com`-> get ssl certificate
+
+`sudo certbot renew --dry-run` -> test auto renewal, otherwise cert will run out after 90 days
+
+## Compressing data
+
+Could be done through nginx or node. Nginx brings great features out of the box for this.
